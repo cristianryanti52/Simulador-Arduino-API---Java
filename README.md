@@ -19,3 +19,39 @@ Este projeto simula a leitura de sensores de um **Arduino físico** ou através 
 - **Git** instalado ([Baixar aqui](https://git-scm.com/downloads))
 - **Arduino IDE** instalado ([Baixar aqui](https://www.arduino.cc/en/software)) (caso use um Arduino real)
 - **Bibliotecas Java:** `jSerialComm` (caso conecte ao Arduino físico)
+
+2️⃣ Rodar em Modo Simulado
+Se deseja apenas testar o sistema sem um Arduino físico:
+javac SimuladorArduino.java
+java SimuladorArduino
+
+4️⃣ Rodar com API
+Se deseja capturar dados de uma API local:
+javac ArduinoAPIClient.java
+java ArduinoAPIClient
+⚠️ Certifique-se de que a API está rodando no endereço correto!
+
+
+🔌 Como Conectar ao Arduino Físico
+1️⃣ Conecte o Arduino via cabo USB na sua máquina.
+2️⃣ Abra o Arduino IDE e carregue o seguinte código:
+
+void setup() {
+    Serial.begin(9600);
+}
+
+void loop() {
+    Serial.println("T" + String(random(20, 30))); // Simula temperatura
+    Serial.println("G" + String(random(200, 600))); // Simula sensor de gás
+    delay(3000);
+}
+
+3️⃣ Compile e envie para o Arduino.
+4️⃣ No terminal, rode:
+
+javac ArduinoSerialReader.java
+java ArduinoSerialReader
+
+
+
+

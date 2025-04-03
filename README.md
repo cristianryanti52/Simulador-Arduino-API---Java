@@ -24,7 +24,7 @@ Este projeto simula a leitura de sensores de um **Arduino físico** ou através 
 2️⃣ Rodar em Modo Simulado
 Se deseja apenas testar o sistema sem um Arduino físico, execute os comandos abaixo:
 
-sh
+
 javac SimuladorArduino.java
 java SimuladorArduino
 
@@ -32,7 +32,7 @@ java SimuladorArduino
 3️⃣ Rodar com API
 Se deseja capturar dados de sensores via uma API local, utilize:
 
-sh
+
 javac ArduinoAPIClient.java
 java ArduinoAPIClient
 
@@ -43,7 +43,7 @@ java ArduinoAPIClient
 1️⃣ Conecte o Arduino via cabo USB na sua máquina.
 2️⃣ Abra o Arduino IDE e carregue o seguinte código no Arduino:
 
-sh
+
 void setup() {
     Serial.begin(9600);
 }
@@ -57,7 +57,7 @@ void loop() {
 3️⃣ Compile e envie para o Arduino.
 4️⃣ No terminal, execute:
 
-sh
+
 javac ArduinoSerialReader.java
 java ArduinoSerialReader
 
